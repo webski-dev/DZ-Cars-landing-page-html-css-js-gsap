@@ -1,0 +1,748 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  margin: 0;
+}
+
+:root {
+  --white: #ffffff;
+  --background: #f3f4f6;
+  --background2: #f7f5fb;
+  --black: #252627;
+  --red: #e3170a;
+  --boxShadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  --transition: all 0.2s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+body {
+  font-family: Nunito;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+p {
+  text-align: center;
+}
+
+nav {
+  background-color: var(--background2);
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+nav .desktop-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+nav .logo {
+  font-size: 1.5rem;
+}
+nav .logo .spanLogo {
+  font-weight: 800;
+}
+nav .menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 2rem;
+  height: 2.5rem;
+  width: 30rem;
+  box-shadow: var(--boxShadow);
+}
+nav .menuLInk {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+nav .nav-button {
+  border-radius: 2rem;
+  background-color: var(--black);
+  height: 2rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--background);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  box-shadow: var(--boxShadow);
+  cursor: pointer;
+}
+
+hero {
+  min-width: 100%;
+  min-height: 60vh;
+  background-color: var(--black);
+}
+hero .hero-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--black);
+  max-width: 100vw;
+  height: 60vh;
+  margin-bottom: 4rem;
+}
+hero .hero-content .hero-content-left {
+  width: 30vw;
+  color: var(--background);
+  font-size: 2rem;
+  font-weight: 100;
+  margin-left: 4rem;
+  animation: fadeIn 3s ease 0s 1 normal forwards;
+}
+hero .hero-content .hero-img {
+  margin-right: 4rem;
+  animation: slideIn 2s ease 0s 1 normal forwards;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+article .how-it-works {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+article .how-it-works .step-1,
+article .how-it-works .step-2,
+article .how-it-works .step-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--boxShadow);
+  margin-top: 4rem;
+  width: 25vw;
+  height: 15rem;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 1rem;
+}
+article .how-it-works .step-1 .location-img,
+article .how-it-works .step-1 .calendar-img,
+article .how-it-works .step-2 .location-img,
+article .how-it-works .step-2 .calendar-img,
+article .how-it-works .step-3 .location-img,
+article .how-it-works .step-3 .calendar-img {
+  width: 6rem;
+}
+article .how-it-works .step-1:hover,
+article .how-it-works .step-2:hover,
+article .how-it-works .step-3:hover {
+  scale: 0.9;
+}
+article .our-cars,
+article .extra-services {
+  background-color: var(--background2);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  width: 100vw;
+  height: 70vh;
+  margin-bottom: 4rem;
+}
+article .our-cars .car-selection-container,
+article .our-cars .extra-services-container,
+article .extra-services .car-selection-container,
+article .extra-services .extra-services-container {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+article .our-cars .car-1,
+article .our-cars .car-2,
+article .our-cars .service-1,
+article .our-cars .service-2,
+article .our-cars .service-3,
+article .extra-services .car-1,
+article .extra-services .car-2,
+article .extra-services .service-1,
+article .extra-services .service-2,
+article .extra-services .service-3 {
+  padding: 1rem;
+  background-color: var(--white);
+  box-shadow: var(--boxShadow);
+  border-radius: 0.5rem;
+  width: 25vw;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+article .our-cars .car-1 .car-1-bottom,
+article .our-cars .car-1 .car-2-bottom,
+article .our-cars .car-2 .car-1-bottom,
+article .our-cars .car-2 .car-2-bottom,
+article .our-cars .service-1 .car-1-bottom,
+article .our-cars .service-1 .car-2-bottom,
+article .our-cars .service-2 .car-1-bottom,
+article .our-cars .service-2 .car-2-bottom,
+article .our-cars .service-3 .car-1-bottom,
+article .our-cars .service-3 .car-2-bottom,
+article .extra-services .car-1 .car-1-bottom,
+article .extra-services .car-1 .car-2-bottom,
+article .extra-services .car-2 .car-1-bottom,
+article .extra-services .car-2 .car-2-bottom,
+article .extra-services .service-1 .car-1-bottom,
+article .extra-services .service-1 .car-2-bottom,
+article .extra-services .service-2 .car-1-bottom,
+article .extra-services .service-2 .car-2-bottom,
+article .extra-services .service-3 .car-1-bottom,
+article .extra-services .service-3 .car-2-bottom {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+article .our-cars .car-1 .car-1-bottom .car-1-rent-button,
+article .our-cars .car-1 .car-1-bottom .car-2-rent-button,
+article .our-cars .car-1 .car-2-bottom .car-1-rent-button,
+article .our-cars .car-1 .car-2-bottom .car-2-rent-button,
+article .our-cars .car-2 .car-1-bottom .car-1-rent-button,
+article .our-cars .car-2 .car-1-bottom .car-2-rent-button,
+article .our-cars .car-2 .car-2-bottom .car-1-rent-button,
+article .our-cars .car-2 .car-2-bottom .car-2-rent-button,
+article .our-cars .service-1 .car-1-bottom .car-1-rent-button,
+article .our-cars .service-1 .car-1-bottom .car-2-rent-button,
+article .our-cars .service-1 .car-2-bottom .car-1-rent-button,
+article .our-cars .service-1 .car-2-bottom .car-2-rent-button,
+article .our-cars .service-2 .car-1-bottom .car-1-rent-button,
+article .our-cars .service-2 .car-1-bottom .car-2-rent-button,
+article .our-cars .service-2 .car-2-bottom .car-1-rent-button,
+article .our-cars .service-2 .car-2-bottom .car-2-rent-button,
+article .our-cars .service-3 .car-1-bottom .car-1-rent-button,
+article .our-cars .service-3 .car-1-bottom .car-2-rent-button,
+article .our-cars .service-3 .car-2-bottom .car-1-rent-button,
+article .our-cars .service-3 .car-2-bottom .car-2-rent-button,
+article .extra-services .car-1 .car-1-bottom .car-1-rent-button,
+article .extra-services .car-1 .car-1-bottom .car-2-rent-button,
+article .extra-services .car-1 .car-2-bottom .car-1-rent-button,
+article .extra-services .car-1 .car-2-bottom .car-2-rent-button,
+article .extra-services .car-2 .car-1-bottom .car-1-rent-button,
+article .extra-services .car-2 .car-1-bottom .car-2-rent-button,
+article .extra-services .car-2 .car-2-bottom .car-1-rent-button,
+article .extra-services .car-2 .car-2-bottom .car-2-rent-button,
+article .extra-services .service-1 .car-1-bottom .car-1-rent-button,
+article .extra-services .service-1 .car-1-bottom .car-2-rent-button,
+article .extra-services .service-1 .car-2-bottom .car-1-rent-button,
+article .extra-services .service-1 .car-2-bottom .car-2-rent-button,
+article .extra-services .service-2 .car-1-bottom .car-1-rent-button,
+article .extra-services .service-2 .car-1-bottom .car-2-rent-button,
+article .extra-services .service-2 .car-2-bottom .car-1-rent-button,
+article .extra-services .service-2 .car-2-bottom .car-2-rent-button,
+article .extra-services .service-3 .car-1-bottom .car-1-rent-button,
+article .extra-services .service-3 .car-1-bottom .car-2-rent-button,
+article .extra-services .service-3 .car-2-bottom .car-1-rent-button,
+article .extra-services .service-3 .car-2-bottom .car-2-rent-button {
+  background-color: var(--black);
+  color: var(--background2);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+article .our-cars .car-1 .car-1-bottom .car-1-rent-button:hover,
+article .our-cars .car-1 .car-1-bottom .car-2-rent-button:hover,
+article .our-cars .car-1 .car-2-bottom .car-1-rent-button:hover,
+article .our-cars .car-1 .car-2-bottom .car-2-rent-button:hover,
+article .our-cars .car-2 .car-1-bottom .car-1-rent-button:hover,
+article .our-cars .car-2 .car-1-bottom .car-2-rent-button:hover,
+article .our-cars .car-2 .car-2-bottom .car-1-rent-button:hover,
+article .our-cars .car-2 .car-2-bottom .car-2-rent-button:hover,
+article .our-cars .service-1 .car-1-bottom .car-1-rent-button:hover,
+article .our-cars .service-1 .car-1-bottom .car-2-rent-button:hover,
+article .our-cars .service-1 .car-2-bottom .car-1-rent-button:hover,
+article .our-cars .service-1 .car-2-bottom .car-2-rent-button:hover,
+article .our-cars .service-2 .car-1-bottom .car-1-rent-button:hover,
+article .our-cars .service-2 .car-1-bottom .car-2-rent-button:hover,
+article .our-cars .service-2 .car-2-bottom .car-1-rent-button:hover,
+article .our-cars .service-2 .car-2-bottom .car-2-rent-button:hover,
+article .our-cars .service-3 .car-1-bottom .car-1-rent-button:hover,
+article .our-cars .service-3 .car-1-bottom .car-2-rent-button:hover,
+article .our-cars .service-3 .car-2-bottom .car-1-rent-button:hover,
+article .our-cars .service-3 .car-2-bottom .car-2-rent-button:hover,
+article .extra-services .car-1 .car-1-bottom .car-1-rent-button:hover,
+article .extra-services .car-1 .car-1-bottom .car-2-rent-button:hover,
+article .extra-services .car-1 .car-2-bottom .car-1-rent-button:hover,
+article .extra-services .car-1 .car-2-bottom .car-2-rent-button:hover,
+article .extra-services .car-2 .car-1-bottom .car-1-rent-button:hover,
+article .extra-services .car-2 .car-1-bottom .car-2-rent-button:hover,
+article .extra-services .car-2 .car-2-bottom .car-1-rent-button:hover,
+article .extra-services .car-2 .car-2-bottom .car-2-rent-button:hover,
+article .extra-services .service-1 .car-1-bottom .car-1-rent-button:hover,
+article .extra-services .service-1 .car-1-bottom .car-2-rent-button:hover,
+article .extra-services .service-1 .car-2-bottom .car-1-rent-button:hover,
+article .extra-services .service-1 .car-2-bottom .car-2-rent-button:hover,
+article .extra-services .service-2 .car-1-bottom .car-1-rent-button:hover,
+article .extra-services .service-2 .car-1-bottom .car-2-rent-button:hover,
+article .extra-services .service-2 .car-2-bottom .car-1-rent-button:hover,
+article .extra-services .service-2 .car-2-bottom .car-2-rent-button:hover,
+article .extra-services .service-3 .car-1-bottom .car-1-rent-button:hover,
+article .extra-services .service-3 .car-1-bottom .car-2-rent-button:hover,
+article .extra-services .service-3 .car-2-bottom .car-1-rent-button:hover,
+article .extra-services .service-3 .car-2-bottom .car-2-rent-button:hover {
+  background-color: var(--background2);
+  color: var(--black);
+}
+article .our-cars .car-1 .car-1-bottom .car-1-rent-price,
+article .our-cars .car-1 .car-1-bottom .car-2-rent-price,
+article .our-cars .car-1 .car-2-bottom .car-1-rent-price,
+article .our-cars .car-1 .car-2-bottom .car-2-rent-price,
+article .our-cars .car-2 .car-1-bottom .car-1-rent-price,
+article .our-cars .car-2 .car-1-bottom .car-2-rent-price,
+article .our-cars .car-2 .car-2-bottom .car-1-rent-price,
+article .our-cars .car-2 .car-2-bottom .car-2-rent-price,
+article .our-cars .service-1 .car-1-bottom .car-1-rent-price,
+article .our-cars .service-1 .car-1-bottom .car-2-rent-price,
+article .our-cars .service-1 .car-2-bottom .car-1-rent-price,
+article .our-cars .service-1 .car-2-bottom .car-2-rent-price,
+article .our-cars .service-2 .car-1-bottom .car-1-rent-price,
+article .our-cars .service-2 .car-1-bottom .car-2-rent-price,
+article .our-cars .service-2 .car-2-bottom .car-1-rent-price,
+article .our-cars .service-2 .car-2-bottom .car-2-rent-price,
+article .our-cars .service-3 .car-1-bottom .car-1-rent-price,
+article .our-cars .service-3 .car-1-bottom .car-2-rent-price,
+article .our-cars .service-3 .car-2-bottom .car-1-rent-price,
+article .our-cars .service-3 .car-2-bottom .car-2-rent-price,
+article .extra-services .car-1 .car-1-bottom .car-1-rent-price,
+article .extra-services .car-1 .car-1-bottom .car-2-rent-price,
+article .extra-services .car-1 .car-2-bottom .car-1-rent-price,
+article .extra-services .car-1 .car-2-bottom .car-2-rent-price,
+article .extra-services .car-2 .car-1-bottom .car-1-rent-price,
+article .extra-services .car-2 .car-1-bottom .car-2-rent-price,
+article .extra-services .car-2 .car-2-bottom .car-1-rent-price,
+article .extra-services .car-2 .car-2-bottom .car-2-rent-price,
+article .extra-services .service-1 .car-1-bottom .car-1-rent-price,
+article .extra-services .service-1 .car-1-bottom .car-2-rent-price,
+article .extra-services .service-1 .car-2-bottom .car-1-rent-price,
+article .extra-services .service-1 .car-2-bottom .car-2-rent-price,
+article .extra-services .service-2 .car-1-bottom .car-1-rent-price,
+article .extra-services .service-2 .car-1-bottom .car-2-rent-price,
+article .extra-services .service-2 .car-2-bottom .car-1-rent-price,
+article .extra-services .service-2 .car-2-bottom .car-2-rent-price,
+article .extra-services .service-3 .car-1-bottom .car-1-rent-price,
+article .extra-services .service-3 .car-1-bottom .car-2-rent-price,
+article .extra-services .service-3 .car-2-bottom .car-1-rent-price,
+article .extra-services .service-3 .car-2-bottom .car-2-rent-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--red);
+}
+article .our-cars .car-1 .car-1-bottom .car-1-rent-price span,
+article .our-cars .car-1 .car-1-bottom .car-2-rent-price span,
+article .our-cars .car-1 .car-2-bottom .car-1-rent-price span,
+article .our-cars .car-1 .car-2-bottom .car-2-rent-price span,
+article .our-cars .car-2 .car-1-bottom .car-1-rent-price span,
+article .our-cars .car-2 .car-1-bottom .car-2-rent-price span,
+article .our-cars .car-2 .car-2-bottom .car-1-rent-price span,
+article .our-cars .car-2 .car-2-bottom .car-2-rent-price span,
+article .our-cars .service-1 .car-1-bottom .car-1-rent-price span,
+article .our-cars .service-1 .car-1-bottom .car-2-rent-price span,
+article .our-cars .service-1 .car-2-bottom .car-1-rent-price span,
+article .our-cars .service-1 .car-2-bottom .car-2-rent-price span,
+article .our-cars .service-2 .car-1-bottom .car-1-rent-price span,
+article .our-cars .service-2 .car-1-bottom .car-2-rent-price span,
+article .our-cars .service-2 .car-2-bottom .car-1-rent-price span,
+article .our-cars .service-2 .car-2-bottom .car-2-rent-price span,
+article .our-cars .service-3 .car-1-bottom .car-1-rent-price span,
+article .our-cars .service-3 .car-1-bottom .car-2-rent-price span,
+article .our-cars .service-3 .car-2-bottom .car-1-rent-price span,
+article .our-cars .service-3 .car-2-bottom .car-2-rent-price span,
+article .extra-services .car-1 .car-1-bottom .car-1-rent-price span,
+article .extra-services .car-1 .car-1-bottom .car-2-rent-price span,
+article .extra-services .car-1 .car-2-bottom .car-1-rent-price span,
+article .extra-services .car-1 .car-2-bottom .car-2-rent-price span,
+article .extra-services .car-2 .car-1-bottom .car-1-rent-price span,
+article .extra-services .car-2 .car-1-bottom .car-2-rent-price span,
+article .extra-services .car-2 .car-2-bottom .car-1-rent-price span,
+article .extra-services .car-2 .car-2-bottom .car-2-rent-price span,
+article .extra-services .service-1 .car-1-bottom .car-1-rent-price span,
+article .extra-services .service-1 .car-1-bottom .car-2-rent-price span,
+article .extra-services .service-1 .car-2-bottom .car-1-rent-price span,
+article .extra-services .service-1 .car-2-bottom .car-2-rent-price span,
+article .extra-services .service-2 .car-1-bottom .car-1-rent-price span,
+article .extra-services .service-2 .car-1-bottom .car-2-rent-price span,
+article .extra-services .service-2 .car-2-bottom .car-1-rent-price span,
+article .extra-services .service-2 .car-2-bottom .car-2-rent-price span,
+article .extra-services .service-3 .car-1-bottom .car-1-rent-price span,
+article .extra-services .service-3 .car-1-bottom .car-2-rent-price span,
+article .extra-services .service-3 .car-2-bottom .car-1-rent-price span,
+article .extra-services .service-3 .car-2-bottom .car-2-rent-price span {
+  color: var(--black);
+}
+article .our-cars .car-1 .image-our-cars-car-1,
+article .our-cars .car-1 .image-our-cars-car-2,
+article .our-cars .car-2 .image-our-cars-car-1,
+article .our-cars .car-2 .image-our-cars-car-2,
+article .our-cars .service-1 .image-our-cars-car-1,
+article .our-cars .service-1 .image-our-cars-car-2,
+article .our-cars .service-2 .image-our-cars-car-1,
+article .our-cars .service-2 .image-our-cars-car-2,
+article .our-cars .service-3 .image-our-cars-car-1,
+article .our-cars .service-3 .image-our-cars-car-2,
+article .extra-services .car-1 .image-our-cars-car-1,
+article .extra-services .car-1 .image-our-cars-car-2,
+article .extra-services .car-2 .image-our-cars-car-1,
+article .extra-services .car-2 .image-our-cars-car-2,
+article .extra-services .service-1 .image-our-cars-car-1,
+article .extra-services .service-1 .image-our-cars-car-2,
+article .extra-services .service-2 .image-our-cars-car-1,
+article .extra-services .service-2 .image-our-cars-car-2,
+article .extra-services .service-3 .image-our-cars-car-1,
+article .extra-services .service-3 .image-our-cars-car-2 {
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+article .our-cars .car-1 .image-our-cars-car-1 img,
+article .our-cars .car-1 .image-our-cars-car-2 img,
+article .our-cars .car-2 .image-our-cars-car-1 img,
+article .our-cars .car-2 .image-our-cars-car-2 img,
+article .our-cars .service-1 .image-our-cars-car-1 img,
+article .our-cars .service-1 .image-our-cars-car-2 img,
+article .our-cars .service-2 .image-our-cars-car-1 img,
+article .our-cars .service-2 .image-our-cars-car-2 img,
+article .our-cars .service-3 .image-our-cars-car-1 img,
+article .our-cars .service-3 .image-our-cars-car-2 img,
+article .extra-services .car-1 .image-our-cars-car-1 img,
+article .extra-services .car-1 .image-our-cars-car-2 img,
+article .extra-services .car-2 .image-our-cars-car-1 img,
+article .extra-services .car-2 .image-our-cars-car-2 img,
+article .extra-services .service-1 .image-our-cars-car-1 img,
+article .extra-services .service-1 .image-our-cars-car-2 img,
+article .extra-services .service-2 .image-our-cars-car-1 img,
+article .extra-services .service-2 .image-our-cars-car-2 img,
+article .extra-services .service-3 .image-our-cars-car-1 img,
+article .extra-services .service-3 .image-our-cars-car-2 img {
+  width: 90%;
+}
+article .why-us,
+article .contact {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-bottom: 4rem;
+}
+article .why-us .why-us-content,
+article .why-us .contact-container,
+article .contact .why-us-content,
+article .contact .contact-container {
+  margin-top: 4rem;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+article .why-us .why-us-content .why-us-features-container,
+article .why-us .why-us-content .contact-container,
+article .why-us .contact-container .why-us-features-container,
+article .why-us .contact-container .contact-container,
+article .contact .why-us-content .why-us-features-container,
+article .contact .why-us-content .contact-container,
+article .contact .contact-container .why-us-features-container,
+article .contact .contact-container .contact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+article .why-us .why-us-content .why-us-features-container .why-us-features-left .why-us-left-list,
+article .why-us .why-us-content .why-us-features-container .why-us-features-left .why-us-right-list,
+article .why-us .why-us-content .why-us-features-container .why-us-features-right .why-us-left-list,
+article .why-us .why-us-content .why-us-features-container .why-us-features-right .why-us-right-list,
+article .why-us .why-us-content .contact-container .why-us-features-left .why-us-left-list,
+article .why-us .why-us-content .contact-container .why-us-features-left .why-us-right-list,
+article .why-us .why-us-content .contact-container .why-us-features-right .why-us-left-list,
+article .why-us .why-us-content .contact-container .why-us-features-right .why-us-right-list,
+article .why-us .contact-container .why-us-features-container .why-us-features-left .why-us-left-list,
+article .why-us .contact-container .why-us-features-container .why-us-features-left .why-us-right-list,
+article .why-us .contact-container .why-us-features-container .why-us-features-right .why-us-left-list,
+article .why-us .contact-container .why-us-features-container .why-us-features-right .why-us-right-list,
+article .why-us .contact-container .contact-container .why-us-features-left .why-us-left-list,
+article .why-us .contact-container .contact-container .why-us-features-left .why-us-right-list,
+article .why-us .contact-container .contact-container .why-us-features-right .why-us-left-list,
+article .why-us .contact-container .contact-container .why-us-features-right .why-us-right-list,
+article .contact .why-us-content .why-us-features-container .why-us-features-left .why-us-left-list,
+article .contact .why-us-content .why-us-features-container .why-us-features-left .why-us-right-list,
+article .contact .why-us-content .why-us-features-container .why-us-features-right .why-us-left-list,
+article .contact .why-us-content .why-us-features-container .why-us-features-right .why-us-right-list,
+article .contact .why-us-content .contact-container .why-us-features-left .why-us-left-list,
+article .contact .why-us-content .contact-container .why-us-features-left .why-us-right-list,
+article .contact .why-us-content .contact-container .why-us-features-right .why-us-left-list,
+article .contact .why-us-content .contact-container .why-us-features-right .why-us-right-list,
+article .contact .contact-container .why-us-features-container .why-us-features-left .why-us-left-list,
+article .contact .contact-container .why-us-features-container .why-us-features-left .why-us-right-list,
+article .contact .contact-container .why-us-features-container .why-us-features-right .why-us-left-list,
+article .contact .contact-container .why-us-features-container .why-us-features-right .why-us-right-list,
+article .contact .contact-container .contact-container .why-us-features-left .why-us-left-list,
+article .contact .contact-container .contact-container .why-us-features-left .why-us-right-list,
+article .contact .contact-container .contact-container .why-us-features-right .why-us-left-list,
+article .contact .contact-container .contact-container .why-us-features-right .why-us-right-list {
+  cursor: pointer;
+  list-style: none;
+  font-size: 2rem;
+}
+article .why-us .why-us-content .why-us-features-container .why-us-features-left .why-us-left-list li,
+article .why-us .why-us-content .why-us-features-container .why-us-features-left .why-us-right-list li,
+article .why-us .why-us-content .why-us-features-container .why-us-features-right .why-us-left-list li,
+article .why-us .why-us-content .why-us-features-container .why-us-features-right .why-us-right-list li,
+article .why-us .why-us-content .contact-container .why-us-features-left .why-us-left-list li,
+article .why-us .why-us-content .contact-container .why-us-features-left .why-us-right-list li,
+article .why-us .why-us-content .contact-container .why-us-features-right .why-us-left-list li,
+article .why-us .why-us-content .contact-container .why-us-features-right .why-us-right-list li,
+article .why-us .contact-container .why-us-features-container .why-us-features-left .why-us-left-list li,
+article .why-us .contact-container .why-us-features-container .why-us-features-left .why-us-right-list li,
+article .why-us .contact-container .why-us-features-container .why-us-features-right .why-us-left-list li,
+article .why-us .contact-container .why-us-features-container .why-us-features-right .why-us-right-list li,
+article .why-us .contact-container .contact-container .why-us-features-left .why-us-left-list li,
+article .why-us .contact-container .contact-container .why-us-features-left .why-us-right-list li,
+article .why-us .contact-container .contact-container .why-us-features-right .why-us-left-list li,
+article .why-us .contact-container .contact-container .why-us-features-right .why-us-right-list li,
+article .contact .why-us-content .why-us-features-container .why-us-features-left .why-us-left-list li,
+article .contact .why-us-content .why-us-features-container .why-us-features-left .why-us-right-list li,
+article .contact .why-us-content .why-us-features-container .why-us-features-right .why-us-left-list li,
+article .contact .why-us-content .why-us-features-container .why-us-features-right .why-us-right-list li,
+article .contact .why-us-content .contact-container .why-us-features-left .why-us-left-list li,
+article .contact .why-us-content .contact-container .why-us-features-left .why-us-right-list li,
+article .contact .why-us-content .contact-container .why-us-features-right .why-us-left-list li,
+article .contact .why-us-content .contact-container .why-us-features-right .why-us-right-list li,
+article .contact .contact-container .why-us-features-container .why-us-features-left .why-us-left-list li,
+article .contact .contact-container .why-us-features-container .why-us-features-left .why-us-right-list li,
+article .contact .contact-container .why-us-features-container .why-us-features-right .why-us-left-list li,
+article .contact .contact-container .why-us-features-container .why-us-features-right .why-us-right-list li,
+article .contact .contact-container .contact-container .why-us-features-left .why-us-left-list li,
+article .contact .contact-container .contact-container .why-us-features-left .why-us-right-list li,
+article .contact .contact-container .contact-container .why-us-features-right .why-us-left-list li,
+article .contact .contact-container .contact-container .why-us-features-right .why-us-right-list li {
+  background: url("https://webski-dev.github.io/dz-cars-landing-page-html-css-js-gsap/assets/correct.png") no-repeat left top;
+  background-size: 3rem;
+  height: 3rem;
+  padding-left: 4rem;
+  padding-top: 0.2rem;
+}
+article .extra-services {
+  height: 60vh;
+}
+article .extra-services .extra-services-container .service-1,
+article .extra-services .extra-services-container .service-2,
+article .extra-services .extra-services-container .service-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15rem;
+  width: 25vw;
+  cursor: pointer;
+  transition: var(--transition);
+}
+article .extra-services .extra-services-container .service-1:hover,
+article .extra-services .extra-services-container .service-2:hover,
+article .extra-services .extra-services-container .service-3:hover {
+  scale: 0.9;
+}
+article .contact .contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+article .contact .contact-container h1 {
+  padding: 0 0 30px 0;
+  display: block;
+  color: white;
+  text-transform: uppercase;
+}
+article .contact .contact-container .margin {
+  margin: 0 15%;
+}
+article .contact .contact-container *:focus {
+  outline: none;
+}
+article .contact .contact-container .inputGroup {
+  position: relative;
+  margin-bottom: 30px;
+}
+article .contact .contact-container .inputGroup label {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  color: var(--black);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+article .contact .contact-container .inputGroup input,
+article .contact .contact-container .inputGroup textarea {
+  display: block;
+  width: 280px;
+  border: none;
+  border-bottom: 1px solid #757575;
+  left: 25px;
+  padding: 5px;
+  background: none;
+  color: var(--black);
+}
+article .contact .contact-container .inputGroup input:focus ~ label,
+article .contact .contact-container .inputGroup input:valid ~ label,
+article .contact .contact-container .inputGroup textarea:focus ~ label,
+article .contact .contact-container .inputGroup textarea:valid ~ label {
+  top: -20px;
+  transition: all 0.3s ease;
+  font-size: 13px;
+}
+article .contact .contact-container .inputGroup input:focus ~ .inputBar:before,
+article .contact .contact-container .inputGroup input:focus ~ .inputBar:after,
+article .contact .contact-container .inputGroup textarea:focus ~ .inputBar:before,
+article .contact .contact-container .inputGroup textarea:focus ~ .inputBar:after {
+  width: 50%;
+}
+article .contact .contact-container .inputGroup textarea {
+  height: 100px;
+  width: 280px;
+  overflow: auto;
+  resize: none;
+}
+article .contact .contact-container .inputGroup .inputBar {
+  position: relative;
+  display: block;
+  width: 290px;
+}
+article .contact .contact-container .inputGroup .inputBar:before,
+article .contact .contact-container .inputGroup .inputBar:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  background: white;
+  height: 2px;
+  transition: all 0.2s ease;
+}
+article .contact .contact-container .inputGroup .inputBar:after {
+  right: 50%;
+}
+article .contact .contact-container .inputGroup .inputBar:before {
+  left: 50%;
+}
+article .contact .contact-container button {
+  background-color: var(--black);
+  border: none;
+  padding: 15px 0;
+  margin: 0;
+  width: 290px;
+  color: var(--background);
+  text-transform: uppercase;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: var(--boxShadow);
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition);
+}
+article .contact .contact-container button:hover {
+  scale: 0.9;
+}
+article .contact .contact-container .phone-number-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+article .contact .contact-container .phone-number-content ul {
+  list-style-type: none;
+  font-size: 2rem;
+  line-height: 3.5rem;
+}
+article .contact .contact-container .phone-number-content ul span {
+  font-weight: 200;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
+  flex-direction: row;
+  background-color: var(--black);
+}
+footer .footer-container {
+  margin-top: 4rem;
+  padding: 1rem;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  color: var(--background2);
+  background-color: var(--black);
+  height: 15vh;
+}
+footer .footer-container .footer-links-list {
+  list-style-type: none;
+}
+footer .footer-container .footer-links-list a {
+  color: var(--background2);
+}
+footer .footer-container .company-info {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+footer .footer-container .company-info span {
+  font-weight: 700;
+}/*# sourceMappingURL=css.css.map */
